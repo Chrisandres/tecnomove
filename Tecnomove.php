@@ -17,7 +17,7 @@
 <body>
 
 <header>
-<img src="Imagenes/LOGO2.jpg" width="600px" height="200px"/>
+<?php <img src="Imagenes/LOGO2.jpg" width="600px" height="200px"/> ?>
 
 <nav>
 <ul>
