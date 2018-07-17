@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name = "viewport" content = "user-scalable=no, width=device-width">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>Tecnomove</title>
+<link href="CSS/TecnoCSS.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+
+</head>
+
+<body>
+
+<header>
+<img src="Imagenes/LOGO2.jpg" width="600px" height="200px"/>
+
+<nav>
+<ul>
+<li><a href="Tecnomove.html">Inicio</a></li>
+<li><a href="Tecnomove.html">Marcas</a></li>
+<li><a href="Tecnomove.html">Productos</a> </li>
+<li><a href="Tecnomove.html">Contáctenos</a> </li>
+</ul>
+</nav>
+
+</header>
+
+<h3>Algunas de nuestras soluciones tecnológicas</h3>
+
+<ul id="flexiselDemo1"> 
+    <li><img src="imagenes/image003.jpg" width="100px" height="100px"/></li>
+    <li><img src="imagenes/image005.png" width="100px" height="100px"/></li>    
+    <li><img src="imagenes/image007.png" width="100px" height="100px"/></li>     
+    <li><img src="imagenes/image009.png" width="100px" height="100px"/></li> 
+    <li><img src="imagenes/image011.png" width="100px" height="100px"/></li>                                                          
+</ul>
+
+<div class="clearout"></div> 
+
+<h3>Marcas</h3>   
+   
+<ul id="flexiselDemo3">
+    <li><img src="images/logo-amazon.png" /></li>
+    <li><img src="images/logo-android.png" /></li>
+    <li><img src="images/logo-microsoft.png" /></li>
+    <li><img src="images/logo-hp.png" /></li>                                                 
+</ul>    
+
+<script type="text/javascript">
+
+$(window).load(function() {
+    $("#flexiselDemo1").flexisel();
+
+    $("#flexiselDemo2").flexisel({
+        visibleItems: 4,
+        itemsToScroll: 3,
+        animationSpeed: 200,
+        infinite: true,
+        navigationTargetSelector: null,
+        autoPlay: {
+            enable: false,
+            interval: 5000,
+            pauseOnHover: true
+        },
+        responsiveBreakpoints: { 
+            portrait: { 
+                changePoint:480,
+                visibleItems: 1,
+                itemsToScroll: 1
+            }, 
+            landscape: { 
+                changePoint:640,
+                visibleItems: 2,
+                itemsToScroll: 2
+            },
+            tablet: { 
+                changePoint:768,
+                visibleItems: 3,
+                itemsToScroll: 3
+            }
+        },
+        loaded: function(object) {
+            console.log('Slider loaded...');
+        },
+        before: function(object){
+            console.log('Before transition...');
+        },
+        after: function(object) {
+            console.log('After transition...');
+        },
+        resize: function(object){
+            console.log('After resize...');
+        }
+    });
+    
+    $("#flexiselDemo3").flexisel({
+        visibleItems: 3,
+        itemsToScroll: 1,         
+        autoPlay: {
+            enable: true,
+            interval: 5000,
+            pauseOnHover: true
+        }        
+    });
+    
+    $("#flexiselDemo4").flexisel({
+        infinite: false     
+    });    
+    
+});
+</script>
+
+<div class="clearout"></div> 
+
+<footer>
+
+<div>
+
+<form name="form1" id="form1" method="get" action="#" onSubmit="return validacion();">
+<div class="div">
+<p>Si tiene una duda, póngase en contacto con nosotros</p>
+</div>
+<div class="div">
+<label class="label" for="nombre">Nombre</label>
+<input type="text" id="nombre" name="nombre"/>
+ <span class="span" id="errorNombre">*</span>
+</div>
+<div class="div">
+<label class="label" for="login">Teléfono</label>
+<input type="text" id="telefono" name="telefono"/>
+<span class="span" id="errorNombre">*</span>
+</div>
+<div class="div">
+<label class="label" for="login">Correo</label>
+<input type="text" id="correo" name="correo"/>
+ <span class="span" id="errorCorreo">*</span>
+</div>
+<div class="div">
+<label class="label" for="login">Tema por el contacto</label>
+<textarea name="tema" cols="25" colspan="5" id="tema"></textarea>
+</div>
+<div class="centro">
+<input type="submit" name="hi" id="hi" value="Enviar"/>
+</div>
+</form>
+
+
+</div>
+
+
+<p>Te apoyamos en tus requerimientos y proyectos empresariales, contáctanos:</p>
+
+<p>Mail: info@tecnomove.cl</p> <p>teléfono: +56935779597</p>
+
+</footer>
+
+</body>
+
+</html>
